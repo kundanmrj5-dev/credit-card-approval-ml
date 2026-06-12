@@ -2,7 +2,9 @@
 
 An end-to-end machine learning project for predicting whether a credit card application should be approved. It follows the classic DataCamp-style workflow: missing value handling, categorical encoding, feature scaling, class imbalance handling, and hyperparameter tuning with `GridSearchCV` and Logistic Regression.
 
-Live Demo: https://credit-card-approval-ml-fen924zcfgpkvwspnypjpz.streamlit.app/
+Created by **Kundan Pandey**
+
+Live Demo: [Credit Card Approval Predictor](https://credit-card-approval-ml-fen924zcfgpkvwspnypjpz.streamlit.app/)
 
 ## Project Highlights
 
