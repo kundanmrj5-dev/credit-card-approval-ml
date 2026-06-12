@@ -9,7 +9,16 @@
 ![Stars](https://img.shields.io/github/stars/kundanmrj5-dev/credit-card-approval-ml?style=flat-square)
 ![Last Commit](https://img.shields.io/github/last-commit/kundanmrj5-dev/credit-card-approval-ml?style=flat-square)
 An end-to-end machine learning project for predicting whether a credit card application should be approved. It follows the classic DataCamp-style workflow: missing value handling, categorical encoding, feature scaling, class imbalance handling, and hyperparameter tuning with `GridSearchCV` and Logistic Regression.
+## ✨ Features
 
+- 📥 Automatic UCI Credit Approval dataset download
+- 🧹 Missing value handling and preprocessing
+- 🔄 Unified ML pipeline for categorical and numerical features
+- 📊 Feature scaling and one-hot encoding
+- 🤖 Logistic Regression with hyperparameter tuning
+- ⚖️ Class imbalance handling
+- 📈 Cross-validation and performance evaluation
+- 🌐 Optional Streamlit prediction app
 Created by **Kundan Pandey**
 
 Live Demo: [Credit Card Approval Predictor](https://credit-card-approval-ml-fen924zcfgpkvwspnypjpz.streamlit.app/)
