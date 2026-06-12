@@ -19,7 +19,8 @@ An end-to-end machine learning project for predicting whether a credit card appl
 - ⚖️ Class imbalance handling
 - 📈 Cross-validation and performance evaluation
 - 🌐 Optional Streamlit prediction app
-Created by **Kundan Pandey**
+ 
+    Created by **Kundan Pandey**
 
 Live Demo: [Credit Card Approval Predictor](https://credit-card-approval-ml-fen924zcfgpkvwspnypjpz.streamlit.app/)
 
