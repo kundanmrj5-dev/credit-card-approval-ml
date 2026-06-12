@@ -6,8 +6,8 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Logistic Regression](https://img.shields.io/badge/Logistic_Regression-4285F4?style=flat-square)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-
-Project description here...
+![Stars](https://img.shields.io/github/stars/kundanmrj5-dev/credit-card-approval-ml?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/kundanmrj5-dev/credit-card-approval-ml?style=flat-square)
 An end-to-end machine learning project for predicting whether a credit card application should be approved. It follows the classic DataCamp-style workflow: missing value handling, categorical encoding, feature scaling, class imbalance handling, and hyperparameter tuning with `GridSearchCV` and Logistic Regression.
 
 Created by **Kundan Pandey**
