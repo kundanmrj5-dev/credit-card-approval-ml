@@ -1,5 +1,13 @@
-# Predicting Credit Card Approvals
+# Predicting Credit Card Approval
+🚀 Machine Learning-Based Credit Card Approval Classification System
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF6F00?style=flat-square)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+
+Project description here...
 An end-to-end machine learning project for predicting whether a credit card application should be approved. It follows the classic DataCamp-style workflow: missing value handling, categorical encoding, feature scaling, class imbalance handling, and hyperparameter tuning with `GridSearchCV` and Logistic Regression.
 
 Created by **Kundan Pandey**
