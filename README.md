@@ -93,7 +93,7 @@ Train the model first, then run:
 streamlit run app.py
 ```
 
-The app exposes all 15 anonymized application fields and returns approval probability plus the predicted decision.
+The app shows user-friendly applicant fields while preserving the anonymized model columns internally, then returns approval probability plus the predicted decision.
 
 ## Run Tests
 

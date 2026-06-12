@@ -33,6 +33,79 @@ DEFAULT_NUMERIC_VALUES = {
     "A15": 100.0,
 }
 
+FIELD_LABELS = {
+    "A1": "Applicant profile type",
+    "A2": "Applicant age",
+    "A3": "Debt amount",
+    "A4": "Account status",
+    "A5": "Customer category",
+    "A6": "Employment category",
+    "A7": "Residence category",
+    "A8": "Years employed",
+    "A9": "Prior credit approved",
+    "A10": "Currently employed",
+    "A11": "Credit history count",
+    "A12": "Owns property",
+    "A13": "Application region",
+    "A14": "Area code",
+    "A15": "Income",
+}
+
+FIELD_HELP = {
+    "A1": "Original anonymized column: A1",
+    "A2": "Original anonymized column: A2",
+    "A3": "Original anonymized column: A3",
+    "A4": "Original anonymized column: A4",
+    "A5": "Original anonymized column: A5",
+    "A6": "Original anonymized column: A6",
+    "A7": "Original anonymized column: A7",
+    "A8": "Original anonymized column: A8",
+    "A9": "Original anonymized column: A9",
+    "A10": "Original anonymized column: A10",
+    "A11": "Original anonymized column: A11",
+    "A12": "Original anonymized column: A12",
+    "A13": "Original anonymized column: A13",
+    "A14": "Original anonymized column: A14",
+    "A15": "Original anonymized column: A15",
+}
+
+OPTION_LABELS = {
+    "A1": {"b": "Profile type B", "a": "Profile type A"},
+    "A4": {"u": "Active account", "y": "Secondary account", "l": "Legacy account", "t": "Temporary account"},
+    "A5": {"g": "Standard customer", "p": "Premium customer", "gg": "Extended customer"},
+    "A6": {
+        "c": "Employment group C",
+        "d": "Employment group D",
+        "cc": "Employment group CC",
+        "i": "Employment group I",
+        "j": "Employment group J",
+        "k": "Employment group K",
+        "m": "Employment group M",
+        "r": "Employment group R",
+        "q": "Employment group Q",
+        "w": "Employment group W",
+        "x": "Employment group X",
+        "e": "Employment group E",
+        "aa": "Employment group AA",
+        "ff": "Employment group FF",
+    },
+    "A7": {
+        "v": "Residence group V",
+        "h": "Residence group H",
+        "bb": "Residence group BB",
+        "j": "Residence group J",
+        "n": "Residence group N",
+        "z": "Residence group Z",
+        "dd": "Residence group DD",
+        "ff": "Residence group FF",
+        "o": "Residence group O",
+    },
+    "A9": {"t": "Yes", "f": "No"},
+    "A10": {"t": "Yes", "f": "No"},
+    "A12": {"t": "Yes", "f": "No"},
+    "A13": {"g": "Region G", "p": "Region P", "s": "Region S"},
+}
+
 
 @st.cache_resource
 def load_model():
@@ -42,19 +115,27 @@ def load_model():
 def build_input_form() -> dict[str, object]:
     values: dict[str, object] = {}
 
-    st.subheader("Application Features")
+    st.subheader("Applicant Details")
     left, right = st.columns(2)
 
     for index, column in enumerate(FEATURE_COLUMNS):
         container = left if index % 2 == 0 else right
+        label = FIELD_LABELS[column]
+        help_text = FIELD_HELP[column]
         if column in NUMERIC_COLUMNS:
             values[column] = container.number_input(
-                column,
+                label,
                 value=float(DEFAULT_NUMERIC_VALUES[column]),
                 step=1.0,
+                help=help_text,
             )
         elif column in CATEGORICAL_COLUMNS:
-            values[column] = container.selectbox(column, CATEGORY_OPTIONS[column])
+            values[column] = container.selectbox(
+                label,
+                CATEGORY_OPTIONS[column],
+                format_func=lambda option, feature=column: OPTION_LABELS[feature].get(option, option),
+                help=help_text,
+            )
 
     return values
 
