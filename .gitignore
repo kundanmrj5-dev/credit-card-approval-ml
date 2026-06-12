@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Generated training artifacts are intentionally committed for this portfolio project.
+
+# Local data copies
+data/*.data
+data/*.csv
+data/*.xlsx
+!data/README.md
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
